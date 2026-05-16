@@ -1,7 +1,7 @@
 name: otel_mysql
 description: >-
   OpenTelemetry instrumentation for package:mysql_client. Wraps MySQL query execution in CLIENT-kind spans following OTel stable semantic conventions (db.system.name=mysql, db.operation.name, db.collection.name, db.namespace, db.query.text).
-version: 0.1.0-beta.1
+version: 0.1.0-beta.2-wip
 repository: https://github.com/dartastic/otel_mysql
 homepage: https://dartastic.io
 
