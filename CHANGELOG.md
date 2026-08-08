@@ -1,6 +1,10 @@
 # Changelog
 
-## [0.1.0-beta.2-wip]
+## [0.2.0-wip]
+
+### Added
+
+- Runnable example (`example/otel_mysql_example.dart`).
 
 ## [0.1.0-beta.1] - 2026-05-16
 

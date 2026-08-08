@@ -63,15 +63,13 @@ Attributes _attrs({
   final operation = operationOverride ?? _extractOperation(sqlText);
   final table = tableOverride ?? _extractTable(sqlText);
   return OTel.attributesFromMap(<String, Object>{
-    Database.dbSystem.key: _dbSystem,
-    Database.dbSystemName.key: _dbSystem,
-    if (operation != null) Database.dbOperation.key: operation,
-    if (operation != null) Database.dbOperationName.key: operation,
-    if (table != null) Database.dbCollectionName.key: table,
-    if (namespace != null) Database.dbNamespace.key: namespace,
-    Database.dbQueryText.key: sqlText,
-    if (serverAddress != null) ServerResource.serverAddress.key: serverAddress,
-    if (serverPort != null) ServerResource.serverPort.key: serverPort,
+    Db.dbSystemName.key: _dbSystem,
+    if (operation != null) Db.dbOperationName.key: operation,
+    if (table != null) Db.dbCollectionName.key: table,
+    if (namespace != null) Db.dbNamespace.key: namespace,
+    Db.dbQueryText.key: sqlText,
+    if (serverAddress != null) Server.serverAddress.key: serverAddress,
+    if (serverPort != null) Server.serverPort.key: serverPort,
   });
 }
 
@@ -120,7 +118,7 @@ Future<R> tracedMysqlCall<R>({
     span.addAttributes(
       OTel.attributes([
         OTel.attributeString(
-          ErrorResource.errorType.key,
+          ErrorAttributes.errorType.key,
           e.runtimeType.toString(),
         ),
       ]),
