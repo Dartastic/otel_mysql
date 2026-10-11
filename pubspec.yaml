@@ -3,7 +3,7 @@ description: >-
   OpenTelemetry instrumentation for package:mysql_client. Wraps MySQL query
   execution in CLIENT-kind spans following OTel stable database semantic
   conventions (db.system.name=mysql).
-version: 1.0.0-wip
+version: 0.3.0-wip
 repository: https://github.com/dartastic/otel_mysql
 homepage: https://dartastic.io
 
@@ -11,12 +11,12 @@ environment:
   sdk: ^3.0.0
 
 dependencies:
-  dartastic_opentelemetry: ^1.1.0-beta.17
   dartastic_opentelemetry_api: '>=1.0.0-rc.4 <1.0.0-rc.5'
   mysql_client: ^0.0.27
 
 dev_dependencies:
   dart_flutter_team_lints: ^3.5.2
+  dartastic_opentelemetry: ^1.1.0-beta.17
   pub_semver: ^2.0.0
   pubspec_parse: ^1.5.0
   test: ^1.26.3
