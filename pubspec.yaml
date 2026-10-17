@@ -2,7 +2,7 @@ name: otel_mysql
 description: >-
   OpenTelemetry instrumentation for mysql_client by Dartastic.io. Adds
   standard OpenTelemetry observability to applications that use mysql_client.
-version: 0.3.1
+version: 0.3.2-wip
 repository: https://github.com/dartastic/otel_mysql
 homepage: https://dartastic.io
 
